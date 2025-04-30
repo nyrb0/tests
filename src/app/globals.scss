@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #ffffff;
+    --black-color: #000;
+    --secondary-color: #344bfd;
+    --font-size-base: 16px;
+    --font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--black-color);
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    gap: 10px;
+}

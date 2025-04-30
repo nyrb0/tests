@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    transition: background 0.5s ease;
+    cursor: pointer;
+    border-radius: 4px;
+    gap: 3px;
+    & img {
+        border-radius: 10px;
+    }
+    .name {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        font-weight: 500;
+        text-align: left;
+        span {
+            font-size: 13px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    &:hover {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+    }
+}

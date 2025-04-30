@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+const nextConfig = {
+    images: {
+        domains: ['flagcdn.com', 'upload.wikimedia.org'], // добавь нужные хосты
+    },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
