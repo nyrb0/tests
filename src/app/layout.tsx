@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     description: 'Вся страна мира',
 };
 
-const getCounries = async () => {
+async function getCounries() {
     const response = await fetch(`${baseUrl}/all`);
     if (!response.ok) {
         const error = new Error('Ошибка при получении данных');
         throw error;
     }
     return response.json();
-};
+}
 
 export default async function RootLayout({
     children,
