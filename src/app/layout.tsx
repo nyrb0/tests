@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';
 import Sidebar from '@/widgets/sidebar/Sidebar';
+import { baseUrl } from '@/shared/api/baseUrl';
 
 const geistSans = Inter({
     variable: '--font-inter-sans',
@@ -9,12 +10,15 @@ const geistSans = Inter({
 });
 
 export const metadata: Metadata = {
+    icons: {
+        icon: '/world.png',
+    },
     title: 'Страны',
     description: 'Вся страна мира',
 };
 
 const getCounries = async () => {
-    const response = await fetch('https://restcountries.com/v3.1/all');
+    const response = await fetch(`${baseUrl}/all`);
     if (!response.ok) {
         const error = new Error('Ошибка при получении данных');
         throw error;
@@ -33,7 +37,6 @@ export default async function RootLayout({
             <body className={`${geistSans.variable}`}>
                 <div className="layout">
                     <Sidebar data={countries} />
-
                     {children}
                 </div>
             </body>

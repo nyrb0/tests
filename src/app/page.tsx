@@ -1,3 +1,3 @@
 export default async function Home() {
-    return <div>fojfhght</div>;
+    return <h2 className="warn">Выберите страну 🚩</h2>;
 }

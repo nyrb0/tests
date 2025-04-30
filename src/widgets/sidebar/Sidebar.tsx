@@ -1,6 +1,6 @@
 import { ICountry } from '@/shared/types/country.types';
 import styles from './Sidebar.module.scss';
-import CardCountry from './UI/block-card-country/CardCountry';
+import CardCountry from '../../shared/UI/block-card-country/CardCountry';
 
 const Sidebar = ({ data }: { data: ICountry[] }) => {
     return (
@@ -9,7 +9,7 @@ const Sidebar = ({ data }: { data: ICountry[] }) => {
             <p>({data.length}стран)</p>
             {data.map((country, index) => (
                 <div key={country.name.common} className={styles.card}>
-                    <CardCountry number={index + 1} name={country.translations.rus.common} flags={country.flags} />
+                    <CardCountry enName={country.name.common} number={index + 1} name={country.translations.rus.common} flags={country.flags} />
                 </div>
             ))}
         </aside>
